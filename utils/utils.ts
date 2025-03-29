@@ -5,7 +5,7 @@ export const kebabCase = (str: string) =>
     .toLowerCase();
 
 export const kebabArray = (arr: any[]) => arr.map((item) => kebabCase(item));
-
+ 
 export const randomNumberText = (finalNum: string, setNumber) => {
   let count = 0;
   let newNum = "";
