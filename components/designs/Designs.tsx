@@ -22,5 +22,5 @@ function Designs() {
     </div>
   );
 }
-
+ 
 export default Designs;
