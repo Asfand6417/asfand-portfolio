@@ -89,7 +89,7 @@ export const footer: Footer = {
           link: "https://dribbble.com/braydentw",
           icon: "/static/icons/dribbble-f.svg",
           leavesWebsite: true,
-        },
+        }, 
         {
           name: "IndieHackers",
           link: "https://indiehackers.com/braydentw",
