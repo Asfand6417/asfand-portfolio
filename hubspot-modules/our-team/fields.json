@@ -1,0 +1,213 @@
+{
+  "label": "Our Team",
+  "help_text": "A module for displaying team members with profile information and social links",
+  "module_id": 12345,
+  "host_template_types": ["LANDING_PAGE", "WEBSITE_PAGE", "BLOG_POST"],
+  "fields": [
+    {
+      "id": "title",
+      "name": "title",
+      "label": "Section Title",
+      "type": "text",
+      "default": "Meet Our Team",
+      "help_text": "The main heading for the team section"
+    },
+    {
+      "id": "team_members",
+      "name": "team_members",
+      "label": "Team Members",
+      "type": "group",
+      "occurrence": {
+        "min": 1,
+        "max": 12
+      },
+      "children": [
+        {
+          "id": "name",
+          "name": "name",
+          "label": "Name",
+          "type": "text",
+          "required": true,
+          "help_text": "Team member's full name"
+        },
+        {
+          "id": "position",
+          "name": "position",
+          "label": "Position/Role",
+          "type": "text",
+          "required": true,
+          "help_text": "Job title or role in the organization"
+        },
+        {
+          "id": "profile_image",
+          "name": "profile_image",
+          "label": "Profile Image",
+          "type": "image",
+          "required": false,
+          "help_text": "Profile photo of the team member (recommended: 400x400px)"
+        },
+        {
+          "id": "bio",
+          "name": "bio",
+          "label": "Bio/Description",
+          "type": "richtext",
+          "required": false,
+          "help_text": "Brief description of the team member's background and expertise"
+        },
+        {
+          "id": "social_links",
+          "name": "social_links",
+          "label": "Social Media Links",
+          "type": "group",
+          "occurrence": {
+            "min": 0,
+            "max": 1
+          },
+          "children": [
+            {
+              "id": "linkedin",
+              "name": "linkedin",
+              "label": "LinkedIn URL",
+              "type": "text",
+              "help_text": "Full LinkedIn profile URL"
+            },
+            {
+              "id": "twitter",
+              "name": "twitter",
+              "label": "Twitter URL",
+              "type": "text",
+              "help_text": "Full Twitter profile URL"
+            },
+            {
+              "id": "github",
+              "name": "github",
+              "label": "GitHub URL",
+              "type": "text",
+              "help_text": "Full GitHub profile URL"
+            },
+            {
+              "id": "email",
+              "name": "email",
+              "label": "Email Address",
+              "type": "text",
+              "help_text": "Contact email address"
+            },
+            {
+              "id": "website",
+              "name": "website",
+              "label": "Personal Website",
+              "type": "text",
+              "help_text": "Personal website or portfolio URL"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "layout_options",
+      "name": "layout_options",
+      "label": "Layout Options",
+      "type": "group",
+      "occurrence": {
+        "min": 0,
+        "max": 1
+      },
+      "children": [
+        {
+          "id": "columns_desktop",
+          "name": "columns_desktop",
+          "label": "Columns (Desktop)",
+          "type": "choice",
+          "choices": [
+            ["2", "2 Columns"],
+            ["3", "3 Columns"],
+            ["4", "4 Columns"]
+          ],
+          "default": "3",
+          "help_text": "Number of columns to display on desktop screens"
+        },
+        {
+          "id": "columns_tablet",
+          "name": "columns_tablet",
+          "label": "Columns (Tablet)",
+          "type": "choice",
+          "choices": [
+            ["1", "1 Column"],
+            ["2", "2 Columns"],
+            ["3", "3 Columns"]
+          ],
+          "default": "2",
+          "help_text": "Number of columns to display on tablet screens"
+        },
+        {
+          "id": "columns_mobile",
+          "name": "columns_mobile",
+          "label": "Columns (Mobile)",
+          "type": "choice",
+          "choices": [
+            ["1", "1 Column"],
+            ["2", "2 Columns"]
+          ],
+          "default": "1",
+          "help_text": "Number of columns to display on mobile screens"
+        }
+      ]
+    },
+    {
+      "id": "styling_options",
+      "name": "styling_options",
+      "label": "Styling Options",
+      "type": "group",
+      "occurrence": {
+        "min": 0,
+        "max": 1
+      },
+      "children": [
+        {
+          "id": "background_color",
+          "name": "background_color",
+          "label": "Background Color",
+          "type": "color",
+          "default": {
+            "color": "#ffffff",
+            "opacity": 100
+          },
+          "help_text": "Background color for the section"
+        },
+        {
+          "id": "card_background",
+          "name": "card_background",
+          "label": "Card Background Color",
+          "type": "color",
+          "default": {
+            "color": "#f8f9fa",
+            "opacity": 100
+          },
+          "help_text": "Background color for individual team member cards"
+        },
+        {
+          "id": "text_color",
+          "name": "text_color",
+          "label": "Text Color",
+          "type": "color",
+          "default": {
+            "color": "#333333",
+            "opacity": 100
+          },
+          "help_text": "Primary text color"
+        },
+        {
+          "id": "accent_color",
+          "name": "accent_color",
+          "label": "Accent Color",
+          "type": "color",
+          "default": {
+            "color": "#007bff",
+            "opacity": 100
+          },
+          "help_text": "Color for links and highlights"
+        }
+      ]
+    }
+  ]
+}
